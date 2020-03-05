@@ -27,7 +27,7 @@ def test_handler_fails(monkeypatch):
 def test_api_key_set(monkeypatch):
     """ Ensures exception raised if api key is not set
     """
-    monkeypatch.delenv("API_KEY")
+    monkeypatch.delenv("API_KEY", raising=False)
     event = dict(freshen_url="doesn't matter")
     with pytest.raises(KeyError):
         handler(event, None)

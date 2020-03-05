@@ -24,6 +24,16 @@ def test_handler_fails(monkeypatch):
     assert resp is False
 
 
+@vcr.use_cassette()
+def test_handler_raises(monkeypatch):
+    """Reads from the `test_handler_raises` cassette and processes the request that raises
+    """
+    monkeypatch.setenv("API_KEY", "mykey")
+    event = dict(freshen_url="https://hostdoesnotexist.gov/v1/some_endpoint/freshen.json?api_key=")
+    resp = handler(event, None)
+    assert resp is False
+
+
 def test_api_key_set(monkeypatch):
     """ Ensures exception raised if api key is not set
     """

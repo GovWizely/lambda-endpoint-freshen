@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/GovWizely/lambda-endpoint-freshen.svg?style=svg)](https://circleci.com/gh/GovWizely/lambda-endpoint-freshen)
-[![Maintainability](https://api.codeclimate.com/v1/badges/313039270d5cc676239f/maintainability)](https://codeclimate.com/github/GovWizely/lambda-endpoint-freshen/maintainability)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=GovWizely/lambda-endpoint-freshen)](https://dependabot.com)
+[![Maintainability](https://api.codeclimate.com/v1/badges/313039270d5cc676239f/maintainability)](https://codeclimate.com/github/GovWizely/lambda-endpoint-freshen/maintainability)
 
 # Endpoint Freshener
 

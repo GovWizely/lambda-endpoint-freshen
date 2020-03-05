@@ -1,2 +1,2 @@
-python-lambda
-requests
+python-lambda==3.2.6
+requests==2.23.0

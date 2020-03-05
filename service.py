@@ -1,18 +1,22 @@
-# -*- coding: utf-8 -*-
-
-from __future__ import print_function
-import requests
 import json
+import logging
+import os
 
-API_KEY = 'YOUR_API_TRADE_GOV_ADMIN_KEY_HERE'
+import requests
+
 
 def handler(event, context):
+    api_key = os.getenv("API_KEY")
+    if not api_key:
+        raise KeyError('API_KEY env var is empty')
     print("Received event: " + json.dumps(event, indent=2))
-
+    response = True
     try:
-        response = requests.get(event['freshen_url'] + API_KEY)
-        print(response.text)
-        return response.text
+        freshen_response = requests.get(event["freshen_url"] + api_key)
+        print(freshen_response.text)
+        if "error" in freshen_response.json():
+            response = False
     except Exception as e:
-        print(e)
-        raise e
+        logging.error(e)
+        response = False
+    return response

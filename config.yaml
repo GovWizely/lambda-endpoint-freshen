@@ -4,12 +4,9 @@ function_name: endpoint_freshen
 handler: service.handler
 role: lambda_api
 description: Refresh the endpoint given by the URL in the event
+runtime: python3.8
+environment_variables:
+  API_KEY: ${API_KEY}
 
-# if access key and secret are left blank, boto will use the credentials
-# defined in the [default] section of ~/.aws/credentials.
-aws_access_key_id:
-aws_secret_access_key:
-
-# dist_directory: dist
-# timeout: 15
-# memory_size: 512
+timeout: 300
+memory_size: 128

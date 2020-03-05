@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.trade.gov/v1/some_endpoint/freshen.json?api_key=badkey
+  response:
+    body:
+      string: '{"error":"Unauthorized - Please get a new key at https://api.trade.gov"}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 05 Mar 2020 14:57:33 GMT
+      Server:
+      - Apache
+      Status:
+      - 401 Unauthorized
+      Strict-Transport-Security:
+      - max-age=10886400; includeSubdomains
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - cd3f21b2-3159-4ec1-8abc-433f6b9d104d
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 401
+      message: Unauthorized
+version: 1

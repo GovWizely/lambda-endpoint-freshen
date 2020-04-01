@@ -14,7 +14,7 @@ lambda_client.invoke(FunctionName="endpoint_freshen", InvocationType='Event', Pa
 ## Prerequisites
 
 - This project is tested against Python 3.7+ in [CircleCI](https://app.circleci.com/github/GovWizely/lambda-endpoint-freshen/pipelines).
-- Make sure you have your [Trade.gov API Admin Key](https://api.trade.gov) handy. Your need to be authorized as an admin in order to freshen the data.
+- Make sure you have your [Trade.gov API Admin Key](https://api.trade.gov) handy. You need to be authorized as an admin in order to freshen the data.
 
 ## Getting Started
 
